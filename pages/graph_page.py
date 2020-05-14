@@ -43,8 +43,7 @@ def boxplot_graph(x, y, title, yname, xname):
 def histogram_graph(x, title, xname):
     data = go.Histogram(
         x=x,
-        histnorm='percent',
-        nbinsx=20
+        histnorm='percent'
     )
     layout = go.Layout(
         title={'text': title, 'x': 0.5},
