@@ -596,7 +596,7 @@ def update_download_message(selected_station, download_start_year, download_end_
             end_date = datetime.strptime(str(download_end_year) + str(download_end_month) + '1', '%Y%m%d').date() - timedelta(1)
             message = 'First select GENERATE DATA and once loading is complete select DOWNLOAD DATA to begin downloading {} ' \
                       'data from {} to {} for station {} (station ID {})' \
-                    .format(download_frequency, start_date, end_date, df_selected_data.station_name, df_selected_data.station_id)
+                    .format(selected_frequency, start_date, end_date, df_selected_data.station_name, df_selected_data.station_id)
             message_style = {'width': '100%', 'margin-right': '1rem', 'margin-top': '1rem', 'border': '2px red dashed'}
             message_status = 'PROCEED'
 
