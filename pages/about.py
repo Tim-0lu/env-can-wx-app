@@ -65,7 +65,15 @@ app_layout = html.Div([
             html.Label('Weather History Canada is a work in progress with a goal of continuing to improve the user experience. '
                        'All comments/suggestions and questions are welcome.'),
             html.Label(['Email: ', html.A('weatherhistorycanada@gmail.com', href='weatherhistorycanada@gmail.com')], style={'margin-top': '2rem'}),
-        ], className='four columns', style={'margin-top': '2rem', 'margin-left': '13rem', 'border': '2px black solid', 'text-align': 'left'}),
+            html.A(children=[
+                html.Img(src='../assets/facebook.png',
+                         style={'height': '50px',
+                                'width': '50px',
+                                'float': 'left',
+                                'padding-top': '10px'
+                                })
+            ], href='https://www.facebook.com/Weather-History-Canada-108008557600139/')
+        ], className='four columns', style={'margin-top': '2rem', 'margin-left': '13rem', 'border': '2px black solid', 'text-align': 'left', 'padding': '10px'}),
 
         html.Div([
 
