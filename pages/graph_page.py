@@ -189,7 +189,12 @@ app_layout = html.Div(
 )
 def update_interval_time(variable_names, n_int):
 
-    variable_dropdown = [{'label': variable, 'value': variable} for variable in list(variable_names.keys())[1:]]
+    if variable_names is None:
+        variable_dropdown = [{'label': variable, 'value': variable} for variable in ['Select a Variable']]
+
+    else:
+        variable_dropdown = [{'label': variable, 'value': variable} for variable in list(variable_names.keys())[1:]]
+
     interval = 24*60*60*1*1000  # in milliseconds
 
     return interval, variable_dropdown
